@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:osar_pasar/models/provinces.dart';
 import 'package:osar_pasar/widgets/custom_text_field.dart';
 
-import '../controller/auth/address_controller.dart';
+import '../controller/address_controller.dart';
 import '../utils/colors.dart';
 import 'booking_summary.dart';
 

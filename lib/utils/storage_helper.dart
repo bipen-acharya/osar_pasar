@@ -10,8 +10,13 @@ class StorageHelper {
   static DateTime? getAppLoadedDate() {
     try {
       final box = GetStorage();
-      DateTime dateTime = DateTime.parse(box.read(StorageKey.APP_LOAD_DATE));
-      return dateTime;
+      var fetchedDate = box.read(StorageKey.APP_LOAD_DATE);
+      if (fetchedDate != null) {
+        DateTime dateTime = DateTime.parse(fetchedDate);
+        return dateTime;
+      } else {
+        return null;
+      }
     } catch (e, s) {
       log(e.toString());
       log(s.toString());

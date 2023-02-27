@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:osar_pasar/screens/home.dart';
-import 'package:osar_pasar/screens/login.dart';
+import 'package:osar_pasar/screens/auth/login.dart';
 import '../controller/core_controller.dart';
 import 'onboarding_screen.dart';
 
@@ -30,16 +30,11 @@ class VideoState extends State<SplashScreen>
 
   void navigationPage() {
     if (coreController.isFirstTimeUser()) {
-      print(coreController.isFirstTimeUser());
-
-      Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => Login()));
+      Get.off(() => const OnBoarding());
     } else if (coreController.isUserLoggedIn()) {
-      Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => HomePage()));
+      Get.off(() => HomePage());
     } else {
-      Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => Login()));
+      Get.off(() => Login());
     }
   }
 

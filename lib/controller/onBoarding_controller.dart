@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:osar_pasar/screens/login.dart';
-import 'package:osar_pasar/screens/register.dart';
+import 'package:osar_pasar/screens/auth/login.dart';
+import 'package:osar_pasar/screens/auth/register.dart';
 import '../utils/image_path.dart';
 import '../utils/storage_keys.dart';
 import '../widgets/onboard_items.dart';
@@ -26,7 +26,7 @@ class OnBoardingController extends GetxController {
 
   void onNextTap() {
     if (current_index == onBoardItems.length - 1) {
-      Get.to(Register());
+      Get.to(() => Register());
       return;
     }
     current_index++;
@@ -38,7 +38,7 @@ class OnBoardingController extends GetxController {
   }
 
   void onSkip() {
-    Get.off(Login());
+    Get.off(() => Login());
   }
 
   void onDone() {

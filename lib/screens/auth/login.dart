@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 import 'package:osar_pasar/controller/auth/login_controller.dart';
 import 'package:osar_pasar/screens/home.dart';
 
-import 'package:osar_pasar/screens/register.dart';
+import 'package:osar_pasar/screens/auth/register.dart';
 
-import '../utils/validators.dart';
-import '../widgets/custom_text_field.dart';
+import '../../utils/validators.dart';
+import '../../widgets/custom_text_field.dart';
 
 class Login extends StatelessWidget {
   static const routeName = "/loginScreen";
@@ -112,8 +112,8 @@ class Login extends StatelessWidget {
                         ),
                         onPressed: () async {
                           if (keys.currentState!.validate()) {
-                            Get.to(() => HomePage());
-                            // c.onSubmit();
+                            c.onSubmit;
+                           
                           }
                         },
                         child: const Text("Login"),
@@ -132,12 +132,6 @@ class Login extends StatelessWidget {
                       const Text("Don't have an account?"),
                       TextButton(
                         onPressed: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //     builder: (context) => Register(),
-                          //   ),
-                          // );
                           Get.to(() => Register());
                         },
                         child: const Text(

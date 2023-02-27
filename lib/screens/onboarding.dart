@@ -37,8 +37,7 @@ class OnboardingScreen extends StatelessWidget {
                               decoration: BoxDecoration(
                                   color: (c.current_index.value == i)
                                       ? const Color(0xff00183F)
-                                      : const Color.fromARGB(
-                                          255, 182, 182, 182),
+                                      : const Color.fromARGB(255, 182, 182, 182),
                                   borderRadius: BorderRadius.circular(50)),
                             ),
                           ),

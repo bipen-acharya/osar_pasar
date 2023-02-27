@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:osar_pasar/screens/login.dart';
+import 'package:osar_pasar/screens/auth/login.dart';
 import 'package:osar_pasar/utils/validators.dart';
 
-import '../controller/auth/register_controller.dart';
-import '../widgets/custom_text_field.dart';
+import '../../controller/auth/register_controller.dart';
+import '../../widgets/custom_text_field.dart';
 
 class Register extends StatelessWidget {
   Register({super.key});

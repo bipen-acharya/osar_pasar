@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:osar_pasar/screens/login.dart';
+import 'package:osar_pasar/screens/auth/login.dart';
 
 import '../models/user_model.dart';
 import '../utils/storage_helper.dart';
